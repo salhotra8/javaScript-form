@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Registeration Form</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <div class="heading">
+            <h2>Tutor Registertion Form </h2>
+        </div>
+        <div class="requiredField">
+            <p >* required fields</p>
+        </div>
+    </div>
+    <form name="myform" method="post" onsubmit="validateForm()">
+        <div class="formDiv">
+            <div class="credentials">
+                <strong>Tutor Login Information</strong>
+                <div>
+                    <span>Desired Username:*</span>
+                    <input type="text" name="userName" id="userName" required onfocusout="validUser(value)">
+                </div>
+                <div>
+                    <span>Choose Password:*</span>
+                    <input type="password" name="password" id="password" required onfocusout="validPassword(value)">
+                </div>
+                <div>
+                    <span>Secret Question:*</span>
+                    <select id="secretQuestion">
+                        <option disabled selected>-select secret question-</option>
+                        <option value="hometown">What is your hometown</option>
+                        <option value="sports">What is your favourite sport</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Answer:</span>
+                    <input type="text" name="userName" id="userName" required>
+                </div>
+            </div>
+
+            <div class="details">
+                <strong>Personal Details and Tutor Contact information</strong>
+                <div>
+                    <span>Name:*</span>
+                    <input type="text" id="fullName" required onfocusout="validName(value)">
+                </div>
+                <div>
+                    <span>Gender:*</span>
+                    <select id="gender">
+                        <option disabled selected>-Gender-</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="otherGender">Others</option>
+                    </select>
+                    <span>Age:*</span>
+                    <select id="gender">
+                        <option disabled selected>-Age-</option>
+                        <option value="18">18years</option>
+                        <option value="19">19years</option>
+                        <option value="20">20years</option>
+                        <option value="21">21years</option>
+                        <option value="22">22years</option>
+                        <option value="23">23years</option>
+                        <option value="24">24years</option>
+                        <option value="25">25+years</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Country:*</span>
+                    <input type="text" name="country" id="country" value="India" disabled>
+                </div>
+                <div>
+                    <span>Location:*</span>
+                    <select id="gender">
+                        <option disabled selected>-Select location-</option>
+                        <option value="J&K">Jammu & Kashmir</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kolkata">Kolkata</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Area:*</span>
+                    <input type="text" id="area" required>
+
+                </div>
+                <div>
+                    <span>Present Addres:*</span>
+                    <textarea type="text" id="addres" required></textarea>
+                </div>
+                <div>
+                    <span>Postal / ZipCode:*</span>
+                    <input type="text" id="zipCode" required onfocusout="validZip(value)">
+
+                </div>
+                <div>
+                    <span>Contact No.:*</span>
+                    <input type="text" id="phoneNumber" required onfocusout="validNumber(value)">
+
+                </div>
+                <div>
+                    <span>Email Address.:*</span>
+                    <input type="email" id="email" required onfocusout="validEmail(value)">
+                </div>
+                <div>
+                    <span>Upload Photo:*</span>
+                    <input type="file" id="image" required oninput="validImage(value)">
+                    <p>(*jpg, *gif, *png)
+                    <p>
+                </div>
+
+                <button type="submit">Continue</button>
+
+            </div>
+        </div>
+    </form>
+
+
+    </div>
+</body>
+
+</html>
